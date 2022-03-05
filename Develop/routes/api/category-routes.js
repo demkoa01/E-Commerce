@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
       }
       res.json(categoryData);
     })
-    .call(err => {
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
